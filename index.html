@@ -1,1 +1,50 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Fantasy I</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <!-- Top Battle Scene -->
+    <div id="battle-screen" class="ff-box">
+      <div id="enemy-zone">
+        <div id="enemy-sprite">⚔️</div>
+        <div id="enemy-info">
+          <h2 id="enemy-name">Dark Knight</h2>
+          <p>HP: <span id="enemy-hp">120</span> / <span id="enemy-max-hp">120</span></p>
+        </div>
+      </div>
+
+      <div id="party-zone">
+        <!-- Party members populated by game.js -->
+      </div>
+    </div>
+
+    <!-- Message Log -->
+    <div id="message-box" class="ff-box">
+      <p id="battle-log">A Dark Knight blocks your path!</p>
+    </div>
+
+    <!-- Bottom Command & Stats Panels -->
+    <div id="bottom-panel">
+      <div id="command-box" class="ff-box">
+        <h3 id="active-member-name">Fighter's Turn</h3>
+        <button onclick="playerAction('attack')">Attack</button>
+        <button onclick="playerAction('magic')">Fire (5 MP)</button>
+        <button onclick="playerAction('heal')">Cure (5 MP)</button>
+        <button onclick="playerAction('defend')">Defend</button>
+      </div>
+
+      <div id="party-stats" class="ff-box">
+        <!-- Stats populated by game.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
